@@ -12,12 +12,12 @@ library(jpeg)
 library(png)
 
 # Data Load
-town_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Data/RI_Town_Data_All.csv", stringsAsFactors = FALSE)
-age_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Data/Age_Distribution_Long.csv", stringsAsFactors = FALSE)
-gender_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Data/Gender.csv", stringsAsFactors = FALSE)
-hospital_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Data/Hospital%20Long.csv", stringsAsFactors = FALSE)
-new_cases_long <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Data/New_Cases_Long.csv", stringsAsFactors = FALSE)
-ri_confirmed_cases_wide <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Data/New_Cases_Wide.csv", stringsAsFactors = FALSE)
+town_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/RI_Town_Data_All.csv", stringsAsFactors = FALSE)
+age_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/Age_Distribution_Long.csv", stringsAsFactors = FALSE)
+gender_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/Gender.csv", stringsAsFactors = FALSE)
+hospital_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/Hospital%20Long.csv", stringsAsFactors = FALSE)
+new_cases_long <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/New_Cases_Long.csv", stringsAsFactors = FALSE)
+ri_confirmed_cases_wide <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/New_Cases_Wide.csv", stringsAsFactors = FALSE)
 
 # Editing Town Data to be consistent
 town_data$Town <- str_squish(town_data$Town)
@@ -675,13 +675,13 @@ ui <- fluidPage(
              navbarMenu("Information",
                         tabPanel("Information",
                                  fluidPage(
-                                   includeMarkdown("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Markdowns/Information.md"))),
+                                   includeMarkdown("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Markdowns/Information.md"))),
                         tabPanel("Town/City Information",
                                  fluidPage(
-                                   includeMarkdown("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Markdowns/Town%20Information.md"))),
+                                   includeMarkdown("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Markdowns/Town%20Information.md"))),
                         tabPanel("About",
                                  fluidPage(
-                                   includeMarkdown("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19-/master/Markdowns/About.md"))))))
+                                   includeMarkdown("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Markdowns/About.md"))))))
 
 # Shiny App
 shinyApp(ui, server)
