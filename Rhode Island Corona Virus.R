@@ -6,10 +6,8 @@ library(ggplot2)
 library(stringr)
 library(plotly)
 library(shinythemes)
-library(shinydashboard)
 library(png)
 library(jpeg)
-library(png)
 
 # Data Load
 town_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/RI_Town_Data_All.csv", stringsAsFactors = FALSE)
@@ -59,8 +57,8 @@ server <- function(input, output) {
       
       addCircles(lng=~Longitude,
                  lat=~Latitude,
-                 weight = 4,
-                 radius = ~Case_Color * 30,
+                 weight = 8,
+                 radius = ~sqrt(Case_Color) * 100,
                  color = ~pal(Case_Color),
                  fillOpacity = 1)
     
@@ -71,8 +69,8 @@ server <- function(input, output) {
     ri_map <- ri_map %>% 
       addProviderTiles(providers$CartoDB.Positron) %>% 
       addCircles(lng=~Longitude, lat=~Latitude,
-                 weight = 4,
-                 radius = town_data$Case_Color * 20,
+                 weight = 8,
+                 radius = ~sqrt(Case_Color) * 100,
                  color = pal(town_data$Case_Color),
                  fillOpacity = 1,
                  label = paste(town_data$Town, "has ", town_data$Cases, "cases (click for details)"),
@@ -165,8 +163,8 @@ server <- function(input, output) {
       
       addCircles(lng=~Longitude,
                  lat=~Latitude,
-                 weight = 4,
-                 radius = ~Case_Color * 20,
+                 weight = 8,
+                 radius = ~sqrt(Case_Color) * 100,
                  color = ~pal(Case_Color),
                  fillOpacity = 1)
     
