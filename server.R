@@ -17,15 +17,6 @@ server <- function(input, output) {
     }
     
     pal <- colorBin("YlOrRd", bins = bins)
-    leafletProxy("rhody_map_animate", data=filtered_data()) %>% 
-      clearShapes() %>% 
-      
-      addCircles(lng=~Longitude,
-                 lat=~Latitude,
-                 weight = 8,
-                 radius = ~sqrt(Case_Color) * 100,
-                 color = ~pal(Case_Color),
-                 fillOpacity = 1)
     
     # Map
     ri_map <- leaflet(town_data) %>% 
@@ -131,7 +122,14 @@ server <- function(input, output) {
                  weight = 8,
                  radius = ~sqrt(Case_Color) * 100,
                  color = ~pal(Case_Color),
-                 fillOpacity = 1)
+                 fillOpacity = 1,
+                 label = paste(filtered_data()$Town, "has ", filtered_data()$Cases, "cases (click for details)"),
+                 popup = paste(filtered_data()$Town, "<br> City/Town Population:",
+                               filtered_data()$Population, "<br> Date:", 
+                               filtered_data()$Date, "<br> Number of Cases: ",
+                               filtered_data()$Cases, "<br> Percentage of RI Cases: ",
+                               filtered_data()$Case_Rate, "<br>",
+                               filtered_data()$Case, " case per ", filtered_data()$Case_Per_Resident, " residents"))
     
   })
   
