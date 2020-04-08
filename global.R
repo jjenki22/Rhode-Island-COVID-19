@@ -8,6 +8,7 @@ library(plotly)
 library(shinythemes)
 library(png)
 library(jpeg)
+library(DT)
 library(rmarkdown)
 
 # Data Load

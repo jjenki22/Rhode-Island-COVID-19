@@ -79,7 +79,7 @@ server <- function(input, output) {
   })
   
   output$rhody_animate_town_cases_state <- renderText({
-    paste("Percenatge of States Cases: ", unique(filtered_town_data()$Case_Rate))
+    paste("Percentage of States Cases: ", unique(filtered_town_data()$Case_Rate))
   })
   
   output$rhody_animate_state_new_cases <- renderText({
@@ -87,7 +87,7 @@ server <- function(input, output) {
   })
   
   output$rhody_animate_state_mortality <- renderText({
-    paste("Mortality's: ", unique(filtered_data()$Mortality))
+    paste("Mortalities: ", unique(filtered_data()$Mortality))
   })
   
   output$rhody_animate_state_hospitalization <- renderText({
@@ -347,7 +347,7 @@ server <- function(input, output) {
       if (input$hospital_plot_type == "Line Graph"){
         rhody_hospital <- ggplot(hospital_data, aes(x=Date, y=Aggregate, color = Category)) +
           geom_line() +
-          labs(title="Hospitalization and Mortality", x = "Date", y="Percenatge to Residents Who Tested Positive") +
+          labs(title="Hospitalization and Mortality", x = "Date", y="Percentage to Residents Who Tested Positive") +
           theme_classic() + scale_color_manual(name = "Category",
                                                labels=c("Hospitalization", "Mortality"),
                                                values=c("steelblue3", "firebrick"))
@@ -365,7 +365,7 @@ server <- function(input, output) {
       if (input$hospital_plot_type == "Line Graph") {
         rhody_hospital <- ggplot(hospital_data, aes(x=Date, y=Rate, color = Category)) +
           geom_line() +
-          labs(title="Hospitalization and Mortality", x = "Date", y="Percenatge to Residents Who Tested Positive") +
+          labs(title="Hospitalization and Mortality", x = "Date", y="Percentage to Residents Who Tested Positive") +
           theme_classic() + scale_color_manual(name = "Category",
                                                labels=c("Hospitalization", "Mortality"),
                                                values=c("steelblue3", "firebrick"))
@@ -373,7 +373,7 @@ server <- function(input, output) {
       if (input$hospital_plot_type == "Bar Graph") {
         rhody_hospital <- ggplot(hospital_data, aes(x=Date, y=Rate, fill = Category)) +
           geom_bar(stat = "identity", position = "dodge") +
-          labs(title="Hospitalization and Mortality", x = "Date", y="Percenatge to Residents Who Tested Positive") +
+          labs(title="Hospitalization and Mortality", x = "Date", y="Percentage to Residents Who Tested Positive") +
           theme_classic() + scale_fill_manual(name = "Category",
                                               labels=c("Hospitalization", "Mortality"),
                                               values = c("steelblue3", "firebrick"))
