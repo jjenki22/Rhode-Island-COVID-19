@@ -8,6 +8,7 @@ library(plotly)
 library(shinythemes)
 library(png)
 library(jpeg)
+library(rmarkdown)
 
 # Data Load
 town_data <- read.csv("https://raw.githubusercontent.com/jjenki22/Rhode-Island-COVID-19/master/Data/RI_Town_Data_All.csv", stringsAsFactors = FALSE)
