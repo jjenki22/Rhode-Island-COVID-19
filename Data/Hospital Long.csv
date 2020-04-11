@@ -1,35 +1,37 @@
-﻿Date,Category,Rate,Aggregate
-3/25/20,Hospitalization ,0.1136,15
-3/25/20,Mortality,0,0
-3/26/20,Hospitalization ,0.1394,23
-3/26/20,Mortality,0,0
-3/27/20,Hospitalization ,0.1379,28
-3/27/20,Mortality,0,0
-3/28/20,Hospitalization ,0.1213,29
-3/28/20,Mortality,0.0084,2
-3/29/20,Hospitalization ,0.119,35
-3/29/20,Mortality,0.0102,3
-3/30/20,Hospitalization ,0.1005,41
-3/30/20,Mortality,0.0098,4
-3/31/20,Hospitalization ,0.1209,59
-3/31/20,Mortality,0.0164,8
-4/1/20,Hospitalization ,0.106,60
-4/1/20,Mortality,0.0177,10
-4/2/20,Hospitalization ,0.1096,72
-4/2/20,Mortality,0.0183,12
-4/3/20,Hospitalization ,0.1013,72
-4/3/20,Mortality,0.0197,14
-4/4/20,Hospitalization ,0.1154,93
-4/4/20,Mortality,0.0211,17
-4/5/20,Hospitalization ,0.1117,103
-4/5/20,Mortality,0.0271,25
-4/6/20,Hospitalization ,0.1007,109
-4/6/20,Mortality,0.025,27
-4/7/20,Hospitalization ,0.1001,123
-4/7/20,Mortality,0.0244,30
-4/8/20,Hospitalization ,0.0986,143
-4/8/20,Mortality,0.0241,35
-4/9/20,Hospitalization ,0.1103,160
-4/9/20,Mortality,0.0297,43
-4/10/20,Hospitalization ,0.1255,182
-4/10/20,Mortality,0.0338,49
+﻿Date,Category,Rate,Aggregate,Total_Cases
+3/25/20,Hospitalization ,0.1136,15,132
+3/25/20,Mortality,0,0,132
+3/26/20,Hospitalization ,0.1394,23,165
+3/26/20,Mortality,0,0,165
+3/27/20,Hospitalization ,0.1379,28,203
+3/27/20,Mortality,0,0,203
+3/28/20,Hospitalization ,0.1213,29,239
+3/28/20,Mortality,0.0084,2,239
+3/29/20,Hospitalization ,0.119,35,294
+3/29/20,Mortality,0.0102,3,294
+3/30/20,Hospitalization ,0.1005,41,408
+3/30/20,Mortality,0.0098,4,408
+3/31/20,Hospitalization ,0.1209,59,488
+3/31/20,Mortality,0.0164,8,488
+4/1/20,Hospitalization ,0.106,60,566
+4/1/20,Mortality,0.0177,10,566
+4/2/20,Hospitalization ,0.1096,72,657
+4/2/20,Mortality,0.0183,12,657
+4/3/20,Hospitalization ,0.1013,72,711
+4/3/20,Mortality,0.0197,14,711
+4/4/20,Hospitalization ,0.1154,93,806
+4/4/20,Mortality,0.0211,17,806
+4/5/20,Hospitalization ,0.1117,103,922
+4/5/20,Mortality,0.0271,25,922
+4/6/20,Hospitalization ,0.1007,109,1082
+4/6/20,Mortality,0.025,27,1082
+4/7/20,Hospitalization ,0.1001,123,1229
+4/7/20,Mortality,0.0244,30,1229
+4/8/20,Hospitalization ,0.0986,143,1450
+4/8/20,Mortality,0.0241,35,1450
+4/9/20,Hospitalization ,0.0926,160,1727
+4/9/20,Mortality,0.0249,43,1727
+4/10/20,Hospitalization ,0.0903,182,2015
+4/10/20,Mortality,0.0243,49,2015
+4/11/20,Hospitalization ,0.0779,183,2349
+4/11/20,Mortality,0.0238,56,2349
